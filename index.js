@@ -7,28 +7,29 @@ let password2 = ""
 let password1El = document.getElementById("password1-label")
 let password2El = document.getElementById("password2-label")
 
-function getRandomValue() {
-    let randomValue = Math.floor(Math.random()*characters.length)
-    return randomValue
-}
-function getPassword1() {
-    for (let i = 0; i < 15; i++) {
-        password1 += characters[getRandomValue()]
-    }
-    return password1
-}
-
-function getPassword2() {
-    for (let i = 0; i < 15; i++) {
-        password2 += characters[getRandomValue()]
-    }
-    return password2
-}
-
 function btnClicked() {
+    function getRandomValue() {
+        let randomValue = Math.floor(Math.random()*characters.length)
+        return randomValue
+    }
+    function getPassword1() {
+        for (let i = 0; i < 15; i++) {
+            password1 += characters[getRandomValue()]
+        }
+        return password1
+    }
+    
+    function getPassword2() {
+        for (let i = 0; i < 15; i++) {
+            password2 += characters[getRandomValue()]
+        }
+        return password2
+    }
     password1El.textContent = getPassword1()
     password2El.textContent = getPassword2()
+    console.console(password1, password2)
 }
+
 
 
 
