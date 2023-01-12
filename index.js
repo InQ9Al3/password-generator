@@ -6,6 +6,7 @@ let password2 = ""
 
 let password1El = document.getElementById("password1-label")
 let password2El = document.getElementById("password2-label")
+console.log(password1El, password2El)
 
 function btnClicked() {
     function getRandomValue() {
