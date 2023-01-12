@@ -9,6 +9,8 @@ let password2El = document.getElementById("password2-label")
 console.log(password1El, password2El)
 
 function btnClicked() {
+    password1El.textContent = ""
+    password2El.textContent = ""
     function getRandomValue() {
         let randomValue = Math.floor(Math.random()*characters.length)
         return randomValue
